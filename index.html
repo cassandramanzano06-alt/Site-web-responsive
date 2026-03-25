@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="icon" href="Logo1.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleordgit.css" media="screen and (min-width: 851px)">
+  <link rel="stylesheet" href="stylembgit.css" media="screen and (max-width: 850px)">
+  <title>Cabinet</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<div class="top-menu">
+ <div class="top">
+           <img src="telephone.png" class="image-1" alt="Téléphone" />
+           <img src="Mail.png" class="image-2" alt="Mail" />
+           <h1><a href="tel:X">X</a></h1>
+           <h6><a href="mailto:@mail.com"> @mail.com</a></h6>        
+ </div>
+<nav aria-label="menu">   
+  <ul>
+    <li class="prejudices">
+      <a href="#" class="liprejudices">▼ Menu</a>
+      <ul class="sous-menu">
+        <li>Sous-menu1</li>
+        <li>Sous-menu2</li>
+        <li>Sous-menu3</li>
+        <li>Sous-menu4</li>
+        <li>Sous-menu5</li>
+        <li>Sous-menu6</li>
+      </ul>
+    </li>
+    <li class="contactez">
+      <a href="mailto: @mail.com" class="licontactez">Contact</a>
+    </li>
+  </ul>
+</nav></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const prejudicesItem = document.querySelector(".prejudices");
+    const trigger = prejudicesItem.querySelector(".liprejudices");
+
+    // Ouverture/fermeture au clic sur le déclencheur
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault(); // empêche le lien de recharger la page
+      prejudicesItem.classList.toggle("open");
+    });
+
+    // Fermeture si clic en dehors
+    document.addEventListener("click", function (e) {
+      // Vérifie si le clic est en dehors de .prejudices
+      if (!prejudicesItem.contains(e.target)) {
+        prejudicesItem.classList.remove("open");
+      }
+    });
+  });
+</script>
+<div class="background">
+  <h2>Docteur X</h2>
+  <h3>Spécialiste de</h3>
+  <h4>Exerce dans la région</h4>
+</div>
+<div class="onglets">
+  <div class="domaines">DOMAINES</div>
+  
+ <div class="rectangle-1">
+  <div class="circulation-titre">Accidents</div>
+ </div>
+ <div class="rectangle-2">
+  <div class="vie-titre">Accidents</div>
+ </div>  
+ <div class="rectangle-3">
+  <div class="medical-titre">Accidents</div>
+ </div>  
+ <div class="rectangle-4">
+  <div class="attentat-titre">Accidents</div>
+ </div> 
+ <div class="rectangle-5">
+  <div class="travail-titre">Accidents</div>
+ </div>
+ <div class="rectangle-6">
+  <div class="agressions-titre">Accidents</div>
+ </div>
+</div>
+
+<div class="infos">
+ <div class="bloc-tel">
+  <div class="contact">Contact</div>
+  <div class="telephone"><a href="tel:X">X</a></div>
+ </div>
+  <img src="telephone.png" class="image-tel" alt="Téléphone" />
+  <div class="mail"><a href="mailto: @mail.com"> @mail.com</a></div>
+  <img src="Mail.png"  class="image-mail" alt="Mail" />
+  <div class="location">Cabinet</div>
+  <div class="localisation-texte"><a href="https://www.google.com/maps/place/92000+Nanterre/@48.8974213,2.2018082,13z/data=!3m1!4b1!4m6!3m5!1s0x47e66484d9df25bf:0x7b21ee1c6ac147e2!8m2!3d48.8912663!4d2.2005387!16zL20vMDN3dHg0?hl=fr&authuser=1&entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D"_blank">2 rue X<br><br> 92 000 Nanterre</a></div>
+  <img src="localisation.png" class="image-localisation" alt="Localisation" />
+  <div class="horaires">Horaires</div>
+  <div class="horaires-texte">Lundi au Vendredi de Xh à Xh</div>
+</div>
+</body>
+</html>
